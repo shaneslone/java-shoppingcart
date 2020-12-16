@@ -56,5 +56,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         // required for H2 to work
         http.headers().frameOptions().disable();
 
+        http.logout().disable();
+
     }
 }
