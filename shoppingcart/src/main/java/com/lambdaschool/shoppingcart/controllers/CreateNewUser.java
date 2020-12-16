@@ -51,7 +51,7 @@ public class CreateNewUser {
 // add the default role of user
         Set<UserRoles> newRoles = new HashSet<>();
         newRoles.add(new UserRoles(newuser,
-                roleService.findByName("admin")));
+                roleService.findByName("user")));
         newuser.setRoles(newRoles);
         newuser = userService.save(newuser);
         // set the location header for the newly created resource

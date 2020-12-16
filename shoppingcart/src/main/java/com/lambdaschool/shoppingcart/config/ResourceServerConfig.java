@@ -46,7 +46,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.PATCH, "users/user/**")
                 .hasAnyRole("ADMIN")
-                .antMatchers("/oauth/revoke-token", "/logout").authenticated()
+                .antMatchers("/oauth/revoke-token", "/logout", "/carts/**").authenticated()
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(new OAuth2AccessDeniedHandler());
